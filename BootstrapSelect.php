@@ -8,7 +8,6 @@
 
 namespace panix\ext\bootstrapselect;
 
-use yii\web\View;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
 use yii\helpers\Html;
@@ -32,6 +31,8 @@ class BootstrapSelect extends InputWidget
         'tickIcon' => 'icon-check'
     ];
 
+    public $zIndex = 1060;
+
     /**
      * @inheritdoc
      */
@@ -49,7 +50,7 @@ class BootstrapSelect extends InputWidget
     {
         $view = $this->getView();
         $assets = BootstrapSelectAsset::register($view);
-
+        $this->view->registerCss(".bootstrap-select .dropdown-menu{z-index:{$this->zIndex};}");
         $jsOptions = Json::encode($this->jsOptions);
         $js[] = "$('#{$this->options['id']}').selectpicker({$jsOptions});";
         $view->registerJs(implode("\n", $js));
