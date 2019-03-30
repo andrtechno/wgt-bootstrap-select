@@ -39,7 +39,7 @@ Once the extension is installed, simply use it in your code by :
 <?php
 echo \panix\ext\bootstrapselect\BootstrapSelect::widget([
     'name' => 'items',
-    'value' => array_keys($test2['assigned']),
+    'value' => [], //selected items
     'items' => $items,
     'options' => [
         'multiple' => true
@@ -49,4 +49,20 @@ echo \panix\ext\bootstrapselect\BootstrapSelect::widget([
     ]
 ]);
  ?>
+```
+
+Or ActiveRecord
+
+```php
+<?php
+echo $form->field($model, 'items')->widget('panix\ext\bootstrapselect\BootstrapSelect', [
+    'items' => $items,
+    'options' => [
+        'multiple' => true
+    ],
+    'jsOptions' => [
+        /*...*/
+    ]
+]);
+?>
 ```
