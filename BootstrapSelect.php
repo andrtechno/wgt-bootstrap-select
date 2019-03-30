@@ -21,12 +21,6 @@ use panix\ext\bootstrapselect\BootstrapSelectAsset;
 class BootstrapSelect extends InputWidget
 {
 
-    /**
-     * Dropdownlist options
-     * @var array
-     */
-    public $options = [];
-
     public $items = [];
 
     /**
