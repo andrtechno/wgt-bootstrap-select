@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "snapappointments/bootstrap-select": "~1.*"
+        "snapappointments/bootstrap-select": "~v1.*"
     },
     "autoload": {
         "psr-4": {
