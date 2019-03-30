@@ -8,6 +8,7 @@
 namespace panix\ext\bootstrapselect;
 
 use panix\engine\web\AssetBundle;
+use yii\helpers\ArrayHelper;
 
 /**
  * Class BootstrapSelectAsset
@@ -28,4 +29,10 @@ class BootstrapSelectAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
     ];
+
+    public function init()
+    {
+        $this->js = ArrayHelper::merge($this->js,['js/i18n/defaults-ru_RU.min.js']);
+        parent::init();
+    }
 }
