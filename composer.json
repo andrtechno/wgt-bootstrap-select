@@ -1,7 +1,7 @@
 {
     "name": "panix/wgt-bootstrap-select",
     "description": "Widget bootstrap select",
-    "keywords": ["pixelion-cms", "extension", "widget", "fancybox"],
+    "keywords": ["pixelion-cms", "extension", "widget", "bootstrap", "select"],
     "homepage": "https://github.com/andrtechno/wgt-bootstrap-select",
     "type": "extension",
     "license": "MIT",
