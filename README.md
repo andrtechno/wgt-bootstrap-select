@@ -37,6 +37,16 @@ Once the extension is installed, simply use it in your code by :
 
 ```php
 <?php
-echo \panix\ext\bootstrapselect\BootstrapSelect::widget(['target' => 'select']);
+echo \panix\ext\bootstrapselect\BootstrapSelect::widget([
+    'name' => 'items',
+    'value' => array_keys($test2['assigned']),
+    'items' => $items,
+    'options' => [
+        'multiple' => true
+    ],
+    'jsOptions' => [
+        /*...*/
+    ]
+]);
  ?>
 ```
