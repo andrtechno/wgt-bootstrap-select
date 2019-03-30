@@ -29,7 +29,7 @@ class BootstrapSelect extends InputWidget
      */
     public $jsOptions = [
         'liveSearch' => false,
-        'tickIcon'=>'icon-check'
+        'tickIcon' => 'icon-check'
     ];
 
     /**
@@ -49,11 +49,6 @@ class BootstrapSelect extends InputWidget
     {
         $view = $this->getView();
         $assets = BootstrapSelectAsset::register($view);
-
-
-        //  $this->view->registerJsFile($assets->baseUrl.'');
-        //     $this->jsOptions['utilsScript'] = $assets->baseUrl . '/js/utils.js';
-
 
         $jsOptions = Json::encode($this->jsOptions);
         $js[] = "$('#{$this->options['id']}').selectpicker({$jsOptions});";
