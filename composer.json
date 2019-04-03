@@ -3,7 +3,7 @@
     "description": "Widget bootstrap select",
     "keywords": ["pixelion-cms", "extension", "widget", "bootstrap", "select"],
     "homepage": "https://github.com/andrtechno/wgt-bootstrap-select",
-    "type": "extension",
+    "type": "yii2-extension",
     "license": "MIT",
     "authors": [
         {
