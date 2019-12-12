@@ -52,8 +52,8 @@ class BootstrapSelect extends InputWidget
         $assets = BootstrapSelectAsset::register($view);
         $view->registerCss(".bootstrap-select .dropdown-menu{z-index:{$this->zIndex};}");
         $jsOptions = Json::encode($this->jsOptions);
-        $js[] = "$('#{$this->options['id']}').selectpicker({$jsOptions});";
-        $view->registerJs(implode("\n", $js));
+       // $js[] = "$('#{$this->options['id']}').selectpicker({$jsOptions});";
+        $view->registerJs("$('#{$this->options['id']}').selectpicker({$jsOptions});");
     }
 
 }

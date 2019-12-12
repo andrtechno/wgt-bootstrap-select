@@ -27,7 +27,10 @@ class BootstrapSelectAsset extends AssetBundle
     ];
 
     public $depends = [
-        'yii\web\JqueryAsset',
+        //'yii\web\JqueryAsset',
+        //'app\web\themes\autima\ThemeAsset',
+        //'yii\bootstrap4\BootstrapAsset',
+        'yii\bootstrap4\BootstrapPluginAsset',
     ];
 
     public function init()
