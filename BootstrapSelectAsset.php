@@ -35,7 +35,11 @@ class BootstrapSelectAsset extends AssetBundle
 
     public function init()
     {
-        $lang = str_replace('-', '_', \Yii::$app->languageManager->active->locale);
+        if(\Yii::$app->has('languageManager')){
+            $lang = str_replace('-', '_', \Yii::$app->languageManager->active->locale);
+        }else{
+            $lang = 'ru_RU';
+        }
         $this->js = ArrayHelper::merge($this->js, ["js/i18n/defaults-{$lang}.min.js"]);
         parent::init();
     }
